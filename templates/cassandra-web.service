@@ -1,0 +1,13 @@
+[Unit]
+Description=cassandra-web Service
+Documentation=http://avalanche123.com/cassandra-web
+
+[Service]
+User={{ cassandra_user }}
+Group={{ cassandra_user }}
+ExecStart=/bin/bash -c "source /etc/profile.d/rvm.sh && cassandra-web -H {{ ansible_default_ipv4.address }}"
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
