@@ -1,0 +1,5 @@
+- name: install bundler gem
+  shell: bash -c "source /etc/profile.d/rvm.sh && gem install bundler"
+
+- name: install cassandra-web gem
+  shell: bash -c "source /etc/profile.d/rvm.sh && gem install cassandra-web"
